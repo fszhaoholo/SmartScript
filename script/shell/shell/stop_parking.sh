@@ -1,0 +1,3 @@
+sudo systemctl stop parking_map
+sudo systemctl stop parking_master
+sudo systemctl stop parking_obstacle_fusion

@@ -1,0 +1,12 @@
+#!/usr/bin/expect -f  
+set ip 192.168.2.10  
+set timeout 1
+spawn ssh rootserver@$ip  
+expect {  
+"*yes/no" { send "yes\r"; exp_continue}  
+"*password:" { send " \r" }  
+}  
+expect "#*"  
+send "pwd\r"  
+send  "exit\r"  
+expect eof  
